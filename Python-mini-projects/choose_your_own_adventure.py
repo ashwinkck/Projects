@@ -23,13 +23,13 @@ elif answer == "right":
     if answer == "back":
         print("You go back and lose.")
     elif answer == "cross":
-        answer = input("You cross the bridge and meet a stranger. Do you talk to them? (Yes/No)")
+        answer = input("You cross the bridge and meet a stranger. Do you talk to them? (Yes/No)").lower()
 
         if answer == "yes":
             print("You talk to the stranger and they give you BTC. You WIN!")
         
         elif answer == "no":
-            print("You ignore the stranger and they are offended and you LOSE!")
+            print(f"You ignore the stranger and they are offended and you LOSE! Thank you for trying {name}")
 
         else:
             print("Not a valid option. You lose.")
