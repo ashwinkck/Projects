@@ -18,7 +18,7 @@ elif answer == "right":
     answer = input("You come to a bridge, it looks wobbly, do you want to cross it or head back? (cross/back)")
 
     if answer == "left":
-    answer = input("You come to a river, you can walk around it or swim across. Type walk to walk around and swim to swim across: ")
+        answer = input("You come to a river, you can walk around it or swim across. Type walk to walk around and swim to swim across: ")
 
     if answer == "back":
         print("You go back and lose.")
