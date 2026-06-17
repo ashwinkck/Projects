@@ -1,3 +1,6 @@
+from cryptography.fernet import Fernet
+
+
 master_pwd = input("what is the master password? ")
 
 def view():
