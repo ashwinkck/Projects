@@ -22,3 +22,8 @@ answers = {}
 for word in words:
     answer = input("Enter a word for " + word + ": ")
     answers[word] = answer
+
+for word in words:
+    story = story.replace(word, answers[word])
+
+print(story)
