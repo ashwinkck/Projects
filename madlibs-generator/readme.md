@@ -16,8 +16,9 @@ Enter a word for <emotion2> :happy
 Enter a word for <adverb> :gently
 
 ** OUTPUT **
-.
-.
+<br>
+<br>
+
 {'<animal>': 'dog', '<weather_condition>': 'sunny', '<place2>': 'school', '<adjective1>': 'throw', '<object>': 'watch', '<terrain>': 'sand', '<emotion>': 'sad', '<place>': 'house', '<character>': 'mom', '<emotion2>': 'happy', '<adverb>': 'gently'}
 In the throw land of house, a dog was feeling sad. The dog had lost its watch.
 
