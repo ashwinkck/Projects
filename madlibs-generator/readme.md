@@ -2,6 +2,8 @@
 <br>
 <br>
 madlibs-generator/project2.py
+<br>
+<br>
 Enter a word for <animal> :dog
 Enter a word for <weather_condition> :sunny
 Enter a word for <place2> :school
