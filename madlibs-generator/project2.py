@@ -7,7 +7,7 @@ start_of_word = -1
 target_start = "<"
 target_end = ">"
 
-for i, char in enumerate(story):
+for i, char in enumerate(story):  #complete for loop will locates all of the different words inside our story
     if char == target_start:
         start_of_word = i
 
@@ -27,6 +27,6 @@ for word in words:
 print(answers)
 
 for word in words:
-    story.replace(word,answer[word])
+    story.replace(word,answers[word])
 
 print(story)
