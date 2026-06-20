@@ -1,7 +1,7 @@
-with open("story.txt","r") as f:
+with open("story.txt","r") as f:   #open and reading the text file
     story = f.read()
 
-words = set()
+words = set() #Creating set for getting the unique word alternatively it was list, but we need unique so
 start_of_word = -1
 
 target_start = "<"
@@ -18,4 +18,15 @@ for i, char in enumerate(story):
         start_of_word = -1
 
 
-answers = {"<name>":"Tim"}
+answers = {}
+
+for word in words:
+    answer = input(f"Enter a word for {word} :" )
+    answers[word] = answer
+
+print(answers)
+
+for word in words:
+    story.replace(word,answer[word])
+
+print(story)
