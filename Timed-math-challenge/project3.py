@@ -1,6 +1,6 @@
 import random
 
-OPERATORS - ["+","-","*"]
+OPERATORS = ["+","-","*"]
 MIN_OPERAND = 3
 MAX_OPERAND = 12
 
@@ -10,7 +10,7 @@ def generate_problem():
     oprerator = random.choice(OPERATORS)
 
 
-    expr = str(left) + " " + right + " " + str(oprerator)
+    expr = str(left) + " " + oprerator + " " + str(right)
     print(expr)
     return expr
 
