@@ -19,7 +19,7 @@ def generate_problem():
 wrong = 0
 input("Press enter to start!")
 print("--------------------")
-
+name = input("Enter your name user:")
 start_time = time.time()
 
 for i in range(TOTAL_PROBLEMS):
@@ -35,4 +35,4 @@ end_time = time.time()
 total_time = end_time - start_time
 
 print("---------------------")
-print(f"Nice work kutta!  You finished in {total_time} seconds!")
+print(f"Nice work {name}!  You finished in {total_time} seconds!")
