@@ -35,7 +35,7 @@ end_time = time.time()
 total_time = round(end_time - start_time)
 
 print("---------------------")
-print(f"Nice work {name}!  You finished in {total_time} seconds!")
+print(f"Nice work {name}! You finished in {total_time} seconds!")
 if wrong == 1:
     print("You got 1 wrong")
 else:
