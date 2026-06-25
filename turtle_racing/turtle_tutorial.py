@@ -21,6 +21,16 @@ def get_number_of_racers():
             return racers
         else:
             print("The input should in between (2 - 10)")
+
+def create_turtles(colors):
+    turtles = []
+    for i, color in enumerate(colors):
+        racer = turtle.Turtle()
+        racer.color(color)
+        racer.shape('turtle')
+        racer.left(90)
+        turtles.append(racer)
+
 def init_turtle():
     screen = turtle.Screen()
     screen.setup(WIDTH, HEIGHT)
@@ -30,4 +40,3 @@ racers = get_number_of_racers()
 init_turtle()
 random.shuffle(COLORS)
 colors = COLORS[:racers]
-print(colors)
