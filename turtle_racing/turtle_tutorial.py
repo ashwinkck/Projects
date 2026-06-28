@@ -27,7 +27,7 @@ def race(colors):
     while True:
         for racer in turtles:
             distance = random.randrange(1,20)
-            racer.forward()
+            racer.forward(distance)
 
 def create_turtles(colors):
     turtles = []
