@@ -45,7 +45,7 @@ def create_turtles(colors):
         racer.left(90)
         racer.penup()
         racer.setpos(-WIDTH//2 + (i + 1) * spacingx, -HEIGHT//2 + 20)  #putting position x,y
-        racer.pendown
+        racer.pendown()
         turtles.append(racer)
     return turtles
 
