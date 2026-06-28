@@ -49,6 +49,19 @@ def create_turtles(colors):
         turtles.append(racer)
     return turtles
 
+def display_winner(color):
+    writer = turtle.Turtle()
+    writer.hideturtle()
+    writer.penup() # preventing drawing lines while moving to pos
+    writer.color(color) #Matches the color of the turtle
+    writer.setpos(0,0) # Centers the text in the middle of the screen
+
+    #Writes text on the screen
+    writer.write(
+        f"The winner of this {color}!",
+        align="center",
+        font=("Arial",20,"bold")
+    )
 def init_turtle():
     screen = turtle.Screen()
     screen.setup(WIDTH, HEIGHT)
@@ -59,5 +72,6 @@ init_turtle()
 random.shuffle(COLORS)
 colors = COLORS[:racers]
 winner  = race(colors)
+display_winner(winner)
 print(f"The winner is the turtle with color: {winner}")
 time.sleep(5)
