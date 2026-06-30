@@ -18,23 +18,24 @@ def wpm_test(stdscr):
     stdscr.getkey()
 
     while True:
-        key  = stdscr.getkey()
-
-        if ard(key) == 27:
-            break
-
-        current_text.append(key)
-
         stdscr.clear()
         stdscr.addstr(target_text)
 
-
         for char in current_text:
             stdscr.addstr(char, curses.color_pair(1))
-
-
+        
         stdscr.refresh()
 
+        key = stdscr.getkey()
+
+        if ord(key) == 27:
+            break
+        
+        if key in ("KEY_BACKSPACE", '\b', "\x7f"):
+            if len(current_text) > 0:
+                current_text.pop()
+        else:
+            current_text.append(key)
 
 
 def main(stdscr):
