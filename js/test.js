@@ -5,5 +5,5 @@ console.log("Hello",name, "Welcome to our game! ")
 const shouldWePlay = prompt('Do you wanna play? ')
 
 if (shouldWePlay.toLowerCase() === "yes") {
-    console.log('Okay lets play the game ${name}!');
+    console.log(`Okay lets play the game ${name}!`);
 }
