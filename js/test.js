@@ -6,4 +6,6 @@ const shouldWePlay = prompt('Do you wanna play? ')
 
 if (shouldWePlay.toLowerCase() === "yes") {
     console.log(`Okay lets play the game ${name}!`);
+} else{
+    console.log("Okay (;")
 }
