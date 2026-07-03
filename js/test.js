@@ -6,10 +6,10 @@ const shouldWePlay = prompt('Do you wanna play? ')
 
 if (shouldWePlay.toLowerCase() === "yes") {
     // Game logic
-    const leftOrRight = prompt("You entered a maze, do you want to go left or right? ")
+    const leftOrRight = prompt("You entered a maze, do you want to go left or right? ").toLowerCase()
     if (leftOrRight == "left") {
         console.log("You go left and see a bridge..,")
-        const cross = prompt("Do you wanna cross the bridge?")
+        const cross = prompt("Do you wanna cross the bridge?").toLowerCase()
         if (cross == "yes") {
             console.log('You crossed, but the bridge was weak and broke and you fell. You lost little breh!')
         }else{
