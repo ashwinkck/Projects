@@ -10,7 +10,7 @@ if (shouldWePlay.toLowerCase() === "yes") {
     if (leftOrRight.toLowerCase() === "left") {
         console.log("You go left and see a bridge..,")
         const cross = prompt("Do you wanna cross the bridge?")
-        if (cross === "yes" || cross === "y" || cross === "Okay" ) {
+        if (cross.toLowerCase()=== "yes" || cross.toLowerCase() === "y" || cross.toLowerCase() === "Okay" ) {
             console.log('You crossed, but the bridge was weak and broke and you fell. You lost little breh!')
         }else{
             console.log(`Good choice ${name}.. You won the game`)
