@@ -5,10 +5,23 @@ BASE_URL = "https://cdn.nba.com/static/json/liveData/scoreboard/todaysScoreboard
 
 printer = PrettyPrinter()
 
-data = get(BASE_URL).json()
+# Add a standard browser User-Agent header to bypass the anti-bot block
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Referer": "https://www.nba.com/"
+}
+
+# Pass the headers into the get request
+response = get(BASE_URL, headers=HEADERS)
+
+# Optional debugging safety guard
+if response.status_code != 200:
+    print(f"Failed to fetch data. Status code: {response.status_code}")
+    exit()
+
+data = response.json()
 
 scoreboard = data["scoreboard"]
-
 games = scoreboard["games"]
 
 def getGames():
@@ -39,5 +52,5 @@ VS
 Home: {hLeaders['jerseyNum']} {hLeaders['name']} 
 Away: {aLeaders['jerseyNum']} {aLeaders['name']}''')
         print('''-------------------------------------''')
-        #break
+        
 getGames()
