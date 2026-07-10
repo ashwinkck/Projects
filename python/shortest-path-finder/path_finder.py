@@ -50,6 +50,17 @@ def find_path(maze, stdscr):
 
         if maze[row][col] == end:
             return path
+        neighbors = find_neighbors(maze, row, col)
+        for neighbor in neighbors:
+            if neighbor in visited:
+                continue
+
+            r, c = neighbor
+            if maze[r][c] == "#":
+                continue
+            new_path = path 
+            q.put((neighbor))
+
 
 def find_neighbors(maze, row, col):
     neighbors = []
