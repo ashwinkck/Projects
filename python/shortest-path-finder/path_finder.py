@@ -58,8 +58,9 @@ def find_path(maze, stdscr):
             r, c = neighbor
             if maze[r][c] == "#":
                 continue
-            new_path = path 
-            q.put((neighbor))
+            new_path = path + [neighbor]
+            q.put((neighbor, new_path))
+            visited.add(neighbor)
 
 
 def find_neighbors(maze, row, col):
