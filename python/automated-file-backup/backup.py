@@ -17,3 +17,5 @@ def copy_folder_to_directory(source, dest):
         print(f"Folder copied to: {dest_dir}")
     except FileExistsError:
         print(f"Folder already exists inside : {dest}")
+
+copy_folder_to_directory(source_dir, destination_dir)
