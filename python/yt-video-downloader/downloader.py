@@ -29,6 +29,7 @@ if __name__ == "__main__":
     save_dir = open_file_dialog()
 
     if not save_dir:
+        print("Started downloading...")
         print("Invalid save location.")
     else:
         download_video(video_url, save_dir)
