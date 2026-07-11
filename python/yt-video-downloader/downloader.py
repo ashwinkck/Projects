@@ -12,5 +12,7 @@ def download_video(url, save_path):
 
     except Exception as e:
         print(e)
-url = ""
-save_path = ""
+url = "https://youtu.be/3_9vCamtuPY?si=wWDjUa18FNEIkWrO"
+save_path = "/home/ash/Projects/30days/python/yt-video-downloader/download"
+
+download_video(url, save_path)
