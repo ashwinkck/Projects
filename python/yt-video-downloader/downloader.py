@@ -12,7 +12,23 @@ def download_video(url, save_path):
 
     except Exception as e:
         print(e)
-url = "https://youtu.be/3_9vCamtuPY?si=wWDjUa18FNEIkWrO"
-save_path = "/home/ash/Projects/30days/python/yt-video-downloader/download"
 
-download_video(url, save_path)
+def open_file_dialog():
+    folder = filedialog.askdirectory()
+    if folder:
+        print(f"Selected folder: {folder}")
+    
+    return folder
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.withdraw()
+
+    video_url = input("Please enter a YouTube url: ")
+    save_dir = open_file_dialog()
+
+    if not save_dir:
+        print("Invalid save location.")
+    else:
+        download_video(video_url, save_dir)
