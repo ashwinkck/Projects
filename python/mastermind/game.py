@@ -27,4 +27,12 @@ def guess_code():
         else:
             break
     
-    return guess        
+    return guess   
+
+def check_code(guess, real_code):
+    color_counts = {}
+    correct_pos = 0
+    incorrect_pos = 0
+
+    for color in real_code:
+        
