@@ -22,7 +22,7 @@ def l():
     copy_folder_to_directory(source_dir, destination_dir)
 
 #adding features for backup for particular day
-schedule.every().day.at("11:15").do(lambda: copy_folder_to_directory(source_dir, destination_dir))
+schedule.every().day.at("12:04").do(lambda: copy_folder_to_directory(source_dir, destination_dir))
 
 while True:
     schedule.run_pending()
