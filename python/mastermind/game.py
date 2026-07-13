@@ -48,3 +48,17 @@ def check_code(guess, real_code):
             incorrect_pos += 1
             color_counts[guess_color] -= 1
     return correct_pos, incorrect_pos
+
+def game():
+    code = generate_code()
+    for attempts in range(1, TRIES + 1):
+        guess = guess_code()
+        correct_pos, incorrect_pos = check_code(guess, code)
+        
+        if correct_pos == CODE_LENGTH:
+            print(f"You guessed the code in {attempts} tries!")
+            break
+
+        print(f"Correct position: {correct_pos} | Incorrect postion: {incorrect_pos}")
+    else:
+        print("You ran out of tries, the code was:", *code)
