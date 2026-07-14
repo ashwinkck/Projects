@@ -15,6 +15,12 @@ class Target:
     COLOR = "red"
 
     def __init__(self,x,y):
+        self.x = x
+        self.y = y
+        self.size = 0
+        self.grow = True
+
+    
 
 def main():
     run = True
