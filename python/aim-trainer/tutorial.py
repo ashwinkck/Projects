@@ -10,7 +10,11 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Aim Trainer")
 
 class Target:
-    MAX_SIZE = 
+    MAX_SIZE = 30
+    GROWTH_RATE = 0.2
+    COLOR = "red"
+
+    def __init__(self,x,y):
 
 def main():
     run = True
