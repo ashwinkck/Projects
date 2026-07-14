@@ -21,7 +21,12 @@ class Target:
         self.grow = True
 
     def updated(self):
-        if self.size + self.GROWTH_RATE
+        if self.size + self.GROWTH_RATE >= self.MAX_SIZE:
+            self.grow = False
+        if self.grow:
+            self.size += self.GROWTH_RATE
+        else:
+            self.size -= self.GROWTH_RATE
 
 def main():
     run = True
