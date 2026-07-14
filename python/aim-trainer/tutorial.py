@@ -20,7 +20,8 @@ class Target:
         self.size = 0
         self.grow = True
 
-    
+    def updated(self):
+        if self.size + self.GROWTH_RATE
 
 def main():
     run = True
