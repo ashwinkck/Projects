@@ -42,8 +42,12 @@ class Target:
             pygame.draw.circle(win, self.SECOND_COLOR, (self.x, self.y), self.size * 0.4)
 
 def draw(win, targets):
-    win.fill("")
+    win.fill(BG_COLOR)
 
+    for target in targets:
+        target.draw(win)
+
+    pygame.display.update()
 def main():
     run = True
     targets = []
@@ -63,6 +67,10 @@ def main():
                 target = Target(x, y)
                 targets.append(target)
 
+        for target in targets:
+            target.update()
+        
+        draw(WIN, targets)
 
     pygame.quit()
 
