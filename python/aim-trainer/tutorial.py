@@ -9,6 +9,8 @@ WIDTH, HEIGHT = 800, 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Aim Trainer")
 
+TARGET_INCREMENT = 400
+
 class Target:
     MAX_SIZE = 30
     GROWTH_RATE = 0.2
@@ -39,7 +41,7 @@ class Target:
 
 def main():
     run = True
-
+    targets = []
 
     while run:
         for event in pygame.event.get():
