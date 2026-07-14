@@ -13,6 +13,7 @@ TARGET_INCREMENT = 400 # larger no to make it faster
 TARGET_EVENT = pygame.USEREVENT
 
 TARGET_PADDING = 30
+BG_COLOR = (0,25,40) #RGB
 
 class Target:
     MAX_SIZE = 30
@@ -40,7 +41,8 @@ class Target:
             pygame.draw.circle(win, self.COLOR, (self.x, self.y), self.size * 0.6)
             pygame.draw.circle(win, self.SECOND_COLOR, (self.x, self.y), self.size * 0.4)
 
-
+def draw(win, targets):
+    win.fill("")
 
 def main():
     run = True
