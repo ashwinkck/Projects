@@ -28,6 +28,9 @@ class Target:
         else:
             self.size -= self.GROWTH_RATE
 
+        def draw(self,win):
+            
+
 def main():
     run = True
 
