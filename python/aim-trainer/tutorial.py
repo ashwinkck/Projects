@@ -171,8 +171,5 @@ def main():
         draw_top_bar(WIN, elapsed_time, targets_pressed, misses)
         pygame.display.update()
 
-    pygame.quit()
+    
 
-
-if __name__ == "__main__":
-    main()
