@@ -4,4 +4,6 @@ import shutil
 from subprocess import PIPE,run
 import sys
 
-#checking
+if __name__ =="__main__":
+    args = sys.argv
+    print(args)
