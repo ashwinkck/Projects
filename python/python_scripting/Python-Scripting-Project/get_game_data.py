@@ -5,7 +5,11 @@ from subprocess import PIPE,run
 import sys
 
 def main(source, target):
-    pass
+    cwd = os.getcwd()
+    source_path = os.path.join(cwd, source)
+    target_path = os.path.join(cwd, target)
+
+    
 
 
 if __name__ =="__main__":
