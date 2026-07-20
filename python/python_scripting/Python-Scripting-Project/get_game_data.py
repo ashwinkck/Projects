@@ -4,12 +4,22 @@ import shutil
 from subprocess import PIPE,run
 import sys
 
+
+GAME_DIR_PATTERN = "game"
+
+def find_all_game_dirs_paths(source):
+    game_paths = []
+
+
+    for root, dirs, fi
+
+
 def main(source, target):
     cwd = os.getcwd()
     source_path = os.path.join(cwd, source)
     target_path = os.path.join(cwd, target)
 
-    
+
 
 
 if __name__ =="__main__":
